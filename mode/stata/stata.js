@@ -432,7 +432,7 @@ CodeMirror.defineSimpleMode("stata",{
     {regex: /`"/, token: 'string', push: 'string_compound'},
 
     // Decimal Numbers
-    {regex: /\b[+-]?([0-9]+(\.[0-9]+)?|\.[0-9]+|\.)([eE][+-]?[0-9]+)?[i]?\b/,
+    {regex: /\b[+-]?(?:[0-9]+(?:\.[0-9]+)?|\.[0-9]+|\.)(?:[eE][+-]?[0-9]+)?[i]?\b/,
       token: 'number'},
 
     {regex: 'testing', token: 'builtin'},
