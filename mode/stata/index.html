@@ -7,6 +7,8 @@
 <link rel="stylesheet" href="../../lib/codemirror.css">
 <script src="../../lib/codemirror.js"></script>
 <script src="../../addon/mode/simple.js"></script>
+<script src="../addon/edit/closebrackets.js"></script>
+<script src="../addon/edit/matchbrackets.js"></script>
 <script src="stata.js"></script>
 <style type="text/css">.CodeMirror {border-top: 1px solid black; border-bottom: 1px solid black;}</style>
 <div id=nav>
@@ -76,12 +78,14 @@ end
 
     <script>
       var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+        autoCloseBrackets: true,
         lineNumbers: true,
         lineWrapping: true,
         indentUnit: 4,
+        matchBrackets: true,
         mode: "stata"
       });
     </script>
 
-    <p><strong>MIME types defined:</strong> <code>text/x-stata</code>.</p>
+    <p><strong>MIME types defined:</strong> <code>text/stata</code>, <code>text/x-stata</code>.</p>
   </article>
